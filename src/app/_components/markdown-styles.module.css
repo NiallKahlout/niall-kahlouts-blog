@@ -14,10 +14,12 @@
 
 .markdown h2 {
   @apply mt-12 mb-4 text-2xl font-bold leading-snug text-blog-fg md:text-3xl;
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
 }
 
 .markdown h3 {
   @apply mt-8 mb-4 text-xl font-bold leading-snug text-blog-fg md:text-2xl;
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
 }
 
 .markdown a {
@@ -41,16 +43,41 @@
   @apply my-1;
 }
 
+/* Inline code — subtle pill */
 .markdown code {
-  @apply rounded bg-blog-card-border px-1.5 py-0.5 text-sm font-medium text-blog-fg;
+  @apply rounded-md px-1.5 py-0.5 text-sm font-medium;
+  background: rgb(var(--code-bg) / 0.08);
+  color: rgb(var(--accent));
+  border: 1px solid rgb(var(--border));
+  font-family: ui-monospace, "Cascadia Code", "Fira Code", monospace;
 }
 
+/* Terminal-style code blocks — always dark */
 .markdown pre {
-  @apply my-6 overflow-x-auto rounded-lg border border-blog-border bg-blog-card p-4 text-sm;
+  @apply my-6 overflow-x-auto rounded-xl text-sm leading-relaxed;
+  background: rgb(var(--code-bg));
+  border: 1px solid rgb(var(--code-border));
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  font-family: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+}
+
+/* Three dots in top-left corner of code blocks */
+.markdown pre::before {
+  content: "● ● ●";
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgb(var(--code-border));
+  margin-bottom: 0.75rem;
 }
 
 .markdown pre code {
-  @apply bg-transparent p-0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: rgb(var(--code-fg));
+  font-size: inherit;
 }
 
 .markdown hr {
@@ -66,16 +93,18 @@
 }
 
 .markdown table {
-  @apply w-full border-collapse border border-blog-border rounded-lg overflow-hidden;
+  @apply w-full border-collapse overflow-hidden rounded-lg;
+  border: 1px solid rgb(var(--border));
 }
 
 .markdown th,
 .markdown td {
-  @apply border border-blog-border px-4 py-2 text-left;
+  @apply px-4 py-2 text-left;
+  border: 1px solid rgb(var(--border));
 }
 
 .markdown th {
-  @apply bg-blog-card font-semibold text-blog-fg;
+  @apply font-semibold text-blog-fg bg-blog-card;
 }
 
 .markdown td {

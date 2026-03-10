@@ -15,7 +15,10 @@ export function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Post;
+  const wordCount = content.split(/\s+/).filter(Boolean).length;
+  const readingTime = Math.max(1, Math.round(wordCount / 200));
+
+  return { ...data, slug: realSlug, content, readingTime } as Post;
 }
 
 const HERO_POST_SLUG = "hello-world"; // About Me: Niall Kahlout – always the hero post

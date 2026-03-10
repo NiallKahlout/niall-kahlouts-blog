@@ -4,25 +4,30 @@
 
 @layer base {
   :root {
-    --bg: 250 250 249; /* stone-50 */
-    --fg: 28 25 23; /* stone-900 */
-    --muted: 120 113 108; /* stone-500 */
-    --border: 231 229 228; /* stone-200 */
-    --accent: 180 83 9; /* amber-700 */
-    --accent-hover: 146 64 14; /* amber-800 */
-    --card: 255 255 255;
-    --card-border: 245 245 244; /* stone-100 */
+    --bg: 255 255 255;
+    --fg: 15 12 10;
+    --muted: 120 113 108;       /* stone-500 */
+    --border: 231 229 228;      /* stone-200 */
+    --accent: 180 83 9;         /* amber-700 */
+    --accent-hover: 146 64 14;  /* amber-800 */
+    --card: 250 250 249;        /* stone-50 */
+    --card-border: 231 229 228; /* stone-200 */
+
+    /* always-dark code blocks */
+    --code-bg: 13 17 23;
+    --code-fg: 230 237 243;
+    --code-border: 48 54 61;
   }
 
   .dark {
-    --bg: 24 24 27; /* zinc-900 */
-    --fg: 250 250 250; /* zinc-50 */
-    --muted: 161 161 170; /* zinc-400 */
-    --border: 63 63 70; /* zinc-700 */
-    --accent: 217 119 6; /* amber-500 */
+    --bg: 13 13 18;             /* deep near-black with a cool tint */
+    --fg: 240 240 245;
+    --muted: 148 148 160;
+    --border: 38 38 50;
+    --accent: 217 119 6;        /* amber-500 */
     --accent-hover: 245 158 11; /* amber-400 */
-    --card: 39 39 42; /* zinc-800 */
-    --card-border: 63 63 70; /* zinc-700 */
+    --card: 20 20 28;
+    --card-border: 38 38 50;
   }
 
   html {
@@ -32,11 +37,51 @@
   body {
     background-color: rgb(var(--bg));
     color: rgb(var(--fg));
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
     @apply transition-colors duration-200;
+  }
+
+  /* Amber accent top border strip */
+  body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--accent)) 0%,
+      rgb(var(--accent-hover)) 50%,
+      rgb(var(--accent)) 100%
+    );
+    z-index: 9999;
+  }
+
+  /* Apply heading font globally */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
   }
 
   a {
     @apply transition-colors duration-200;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--muted));
   }
 }
 
@@ -51,5 +96,16 @@
 
   .prose-custom a {
     @apply link-accent font-medium;
+  }
+
+  /* Gradient text utility for headings */
+  .heading-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      #fbbf24 0%,   /* amber-400 */
+      #f97316 50%,  /* orange-500 */
+      #ef4444 100%  /* red-500 */
+    );
   }
 }

@@ -1,8 +1,8 @@
 const GitHubIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="28"
-    height="28"
+    width="22"
+    height="22"
     viewBox="0 0 24 24"
     fill="currentColor"
     className="inline-block align-middle"
@@ -14,20 +14,25 @@ const GitHubIcon = () => (
 
 export function Intro() {
   return (
-    <section className="mt-12 mb-16 md:mb-14">
-      <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-[1.1] text-blog-fg">
-        Niall Kahlout's Blog
+    <section className="mt-14 mb-16 md:mb-14">
+      <div className="mb-1 flex items-center gap-2 text-blog-accent text-sm font-heading font-medium tracking-wider uppercase">
+        <span aria-hidden className="select-none">▸</span>
+        <span>niallkahlout.me</span>
+      </div>
+      <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-[1.1] font-heading heading-gradient">
+        Niall Kahlout&apos;s Blog
       </h1>
-      <p className="mt-4 flex flex-wrap items-center gap-x-2 text-blog-muted text-base md:text-lg max-w-xl">
-        <span>Pinned projects on GitHub.</span>
+      <p className="mt-5 flex flex-wrap items-center gap-x-3 text-blog-muted text-base md:text-lg max-w-xl">
+        <span>Notes on cybersecurity, homelabs, and building on the web.</span>
         <a
           href="https://github.com/NiallKahlout"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blog-accent hover:opacity-80 transition-opacity"
-          aria-label="Check out my GitHub pinned projects"
+          className="inline-flex items-center gap-1.5 text-blog-accent hover:text-blog-accent-hover transition-colors"
+          aria-label="GitHub profile"
         >
           <GitHubIcon />
+          <span className="text-sm font-medium">GitHub</span>
         </a>
       </p>
     </section>

@@ -65,39 +65,39 @@ To support my aspiring career as a Security Analyst, I have developed specialize
 
 * **Network Security:** Proficient in firewall management, VPN configurations, and zero-trust architectures.
 
-  ---
+---
 
-  ### Digital Forensics & Incident Response (DFIR)
+### Digital Forensics & Incident Response (DFIR)
 
 * **Forensic Analysis:** Experience with disk imaging, memory forensics, and malware analysis using tools like Autopsy, Volatility, and Wireshark.
 
 * **Incident Handling:** Ability to triage security incidents, analyze attack patterns, and implement response strategies to mitigate threats.
 
-  ---
+---
 
- ### Automation & Scripting ⚙️
+### Automation & Scripting ⚙️
 
 * **Security Automation:** Using Python, Bash scripting, and PowerShell to automate log analysis, security monitoring, and vulnerability scanning.
 
 * **SOC Process Automation:** Implementing playbooks and automated response actions to improve incident response efficiency.
 
-  ---
+---
 
-### Compliance & Risk Management 📊 
+### Compliance & Risk Management 📊
 
 * **Regulatory Standards:** Strong understanding of SOC 2, GDPR, NIST 800-53, and ISO 27001, ensuring security policies align with compliance requirements.
 
 * **Risk Assessment:** Conducting risk evaluations and vulnerability assessments to identify weaknesses in IT infrastructure.
 
-  ---
+---
 
-### Database & Backend Security 
+### Database & Backend Security
 
 * **SQL & Secure Database Management:** Experience in database security hardening, role-based access controls (RBAC), and encryption best practices.
 
 * **Secure Development:** Ensuring secure coding practices in backend applications using TypeScript, Node.js, and API security measures.
 
-  ---
+---
 
 ## Outside of Tech
 
@@ -111,9 +111,9 @@ For me, technology is all about community—learning together, pushing boundarie
 
 I’m always open to new opportunities, collaborations, and discussions in the cybersecurity and tech space. Feel free to reach out!
 
-GitHub: github.com/niallkahlout
+GitHub: [github.com/NiallKahlout](https://github.com/NiallKahlout)
 
-LinkedIn: linkedin.com/in/niallkahlout
+LinkedIn: [linkedin.com/in/niallkahlout](https://linkedin.com/in/niallkahlout)
 
 Thanks for stopping by! Stay tuned for more updates on my projects and insights into the tech world. 🚀
 
