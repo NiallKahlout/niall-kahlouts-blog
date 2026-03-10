@@ -2,9 +2,11 @@ import Container from "@/app/_components/container";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-10 text-center">
+    <footer className="mt-24 border-t border-blog-border py-12">
       <Container>
-        <h3 className="text-2xl font-bold">Made with Next.js and React.</h3>
+        <p className="text-blog-muted text-center text-sm">
+          Built with Next.js and React. © {new Date().getFullYear()}
+        </p>
       </Container>
     </footer>
   );

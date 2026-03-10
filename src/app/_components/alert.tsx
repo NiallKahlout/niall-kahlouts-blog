@@ -1,5 +1,4 @@
 import Container from "@/app/_components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
 import cn from "classnames";
 
 type Props = {
@@ -9,34 +8,26 @@ type Props = {
 const Alert = ({ preview }: Props) => {
   return (
     <div
-      className={cn("border-b dark:bg-slate-800", {
-        "bg-neutral-800 border-neutral-800 text-white": preview,
-        "bg-neutral-50 border-neutral-200": !preview,
+      className={cn("border-b border-blog-border text-center text-sm", {
+        "bg-blog-card text-blog-fg": preview,
+        "bg-blog-bg text-blog-muted": !preview,
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="py-3">
           {preview ? (
             <>
               This page is a preview.{" "}
-              <a
-                href="/api/exit-preview"
-                className="underline hover:text-teal-300 duration-200 transition-colors"
-              >
-                Click here
-              </a>{" "}
-              to exit preview mode.
+              <a href="/api/exit-preview" className="link-accent">
+                Exit preview
+              </a>
             </>
           ) : (
             <>
-              Check out my personal github & The source code for this blog!{" "}
-              <a
-                href={`https://github.com/NiallKahlout`}
-                className="underline hover:text-blue-600 duration-200 transition-colors"
-              >
-                available on GitHub
+              Source code{" "}
+              <a href="https://github.com/NiallKahlout" className="link-accent">
+                on GitHub
               </a>
-              .
             </>
           )}
         </div>

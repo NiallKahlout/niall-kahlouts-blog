@@ -1,18 +1,83 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-lg leading-relaxed text-blog-fg;
 }
 
 .markdown p,
 .markdown ul,
-.markdown ol,
+.markdown ol {
+  @apply my-5;
+}
+
 .markdown blockquote {
-  @apply my-6;
+  @apply my-6 border-l-4 border-blog-accent pl-6 italic text-blog-muted;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply mt-12 mb-4 text-2xl font-bold leading-snug text-blog-fg md:text-3xl;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply mt-8 mb-4 text-xl font-bold leading-snug text-blog-fg md:text-2xl;
+}
+
+.markdown a {
+  @apply font-medium underline decoration-2 underline-offset-2;
+  color: rgb(var(--accent));
+}
+
+.markdown a:hover {
+  color: rgb(var(--accent-hover));
+}
+
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown li {
+  @apply my-1;
+}
+
+.markdown code {
+  @apply rounded bg-blog-card-border px-1.5 py-0.5 text-sm font-medium text-blog-fg;
+}
+
+.markdown pre {
+  @apply my-6 overflow-x-auto rounded-lg border border-blog-border bg-blog-card p-4 text-sm;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0;
+}
+
+.markdown hr {
+  @apply my-8 border-blog-border;
+}
+
+.markdown img {
+  @apply rounded-lg shadow-md;
+}
+
+.markdown strong {
+  @apply font-semibold text-blog-fg;
+}
+
+.markdown table {
+  @apply w-full border-collapse border border-blog-border rounded-lg overflow-hidden;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-blog-border px-4 py-2 text-left;
+}
+
+.markdown th {
+  @apply bg-blog-card font-semibold text-blog-fg;
+}
+
+.markdown td {
+  @apply text-blog-fg;
 }

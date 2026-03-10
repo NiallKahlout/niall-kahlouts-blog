@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 250 250 249; /* stone-50 */
+    --fg: 28 25 23; /* stone-900 */
+    --muted: 120 113 108; /* stone-500 */
+    --border: 231 229 228; /* stone-200 */
+    --accent: 180 83 9; /* amber-700 */
+    --accent-hover: 146 64 14; /* amber-800 */
+    --card: 255 255 255;
+    --card-border: 245 245 244; /* stone-100 */
+  }
+
+  .dark {
+    --bg: 24 24 27; /* zinc-900 */
+    --fg: 250 250 250; /* zinc-50 */
+    --muted: 161 161 170; /* zinc-400 */
+    --border: 63 63 70; /* zinc-700 */
+    --accent: 217 119 6; /* amber-500 */
+    --accent-hover: 245 158 11; /* amber-400 */
+    --card: 39 39 42; /* zinc-800 */
+    --card-border: 63 63 70; /* zinc-700 */
+  }
+
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--fg));
+    @apply transition-colors duration-200;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .link-accent {
+    @apply underline decoration-2 underline-offset-2;
+    color: rgb(var(--accent));
+  }
+  .link-accent:hover {
+    color: rgb(var(--accent-hover));
+  }
+
+  .prose-custom a {
+    @apply link-accent font-medium;
+  }
+}

@@ -1,21 +1,20 @@
-import { CMS_NAME } from "@/lib/constants";
-
 export function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Niall Kahlout's Blog.
+    <section className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mt-12 mb-16 md:mb-14">
+      <h1 className="text-4xl md:text-7xl font-bold tracking-tighter leading-[1.1] text-blog-fg">
+        Niall Kahlout's Blog
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        Welcome to my personal blog! check out my {" "}
-        <a
-          href="https://github.com/NiallKahlout"
-          className="underline hover:text-blue-600 duration-200 transition-colors"
-        >
-          github
-        </a>{" "}
-       
-      </h4>
+      <div className="text-blog-muted text-lg md:pb-1 md:text-left">
+        <p className="mb-1">
+          Occasional posts on what I'm building and learning.
+        </p>
+        <p>
+          <a href="https://github.com/NiallKahlout" className="link-accent">
+            GitHub
+            <span className="sr-only"> (Niall Kahlout)</span>
+          </a>
+        </p>
+      </div>
     </section>
   );
 }
