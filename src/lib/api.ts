@@ -18,11 +18,17 @@ export function getPostBySlug(slug: string) {
   return { ...data, slug: realSlug, content } as Post;
 }
 
+const HERO_POST_SLUG = "hello-world"; // About Me: Niall Kahlout – always the hero post
+
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
+
+  // Always show About Me as hero; rest in date order
+  const heroIndex = posts.findIndex((p) => p.slug === HERO_POST_SLUG);
+  if (heroIndex <= 0) return posts;
+  const [heroPost] = posts.splice(heroIndex, 1);
+  return [heroPost, ...posts];
 }

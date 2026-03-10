@@ -1,8 +1,7 @@
 import Footer from "@/app/_components/footer";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { CMS_NAME, HOME_OG_IMAGE_URL, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
@@ -10,8 +9,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Niall Kahlout's Blog",
-  description: 'A personal blog by Niall Kahlout',
+  description: "A personal blog by Niall Kahlout",
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
