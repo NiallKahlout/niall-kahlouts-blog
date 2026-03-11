@@ -128,4 +128,4 @@ Thanks for reading! Feel free to reach out if you have any questions about setti
 ### Connect with Me
 
 - GitHub: [github.com/NiallKahlout](https://github.com/NiallKahlout)
-- LinkedIn: [linkedin.com/in/niallkahlout](https://linkedin.com/in/niallkahlout)
+- LinkedIn: [linkedin.com/in/niallkahlout](https://www.linkedin.com/in/niallkahlout)

@@ -113,7 +113,7 @@ I’m always open to new opportunities, collaborations, and discussions in the c
 
 GitHub: [github.com/NiallKahlout](https://github.com/NiallKahlout)
 
-LinkedIn: [linkedin.com/in/niallkahlout](https://linkedin.com/in/niallkahlout)
+LinkedIn: [linkedin.com/in/niallkahlout](https://www.linkedin.com/in/niallkahlout)
 
 Thanks for stopping by! Stay tuned for more updates on my projects and insights into the tech world. 🚀
 
