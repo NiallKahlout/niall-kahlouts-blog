@@ -32,12 +32,20 @@ export function Footer() {
     <footer className="mt-24 border-t border-blog-border py-10">
       <Container>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <Link
-            href="/"
-            className="text-sm font-semibold text-blog-fg hover:opacity-80 transition-opacity"
-          >
-            Niall Kahlout&apos;s Blog
-          </Link>
+          <div className="flex items-center gap-5">
+            <Link
+              href="/"
+              className="text-sm font-semibold text-blog-fg hover:opacity-80 transition-opacity"
+            >
+              Niall Kahlout&apos;s Blog
+            </Link>
+            <Link
+              href="/projects"
+              className="text-sm text-blog-muted hover:text-blog-fg transition-colors"
+            >
+              Projects
+            </Link>
+          </div>
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/NiallKahlout"

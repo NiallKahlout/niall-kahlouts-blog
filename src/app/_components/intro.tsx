@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const GitHubIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +41,13 @@ export function Intro() {
       <p className="mt-4 text-blog-muted text-base md:text-lg max-w-xl">
         Notes on cybersecurity, homelabs, and building on the web.
       </p>
-      <div className="mt-4 flex items-center gap-3">
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 rounded-full border border-blog-border px-4 py-1.5 text-sm font-medium text-blog-muted hover:border-blog-accent hover:text-blog-accent transition-colors"
+        >
+          Projects
+        </Link>
         <a
           href="https://github.com/NiallKahlout"
           target="_blank"
